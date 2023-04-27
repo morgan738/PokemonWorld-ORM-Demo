@@ -21,7 +21,7 @@ const Pokemon = db.define('pokemon', {
 
 
 Pokemon.beforeCreate(async (pokemon) => {
-    console.log("hook console.log --> ", pokemon)
+    // console.log("hook console.log --> ", pokemon)
     if(pokemon.elementType == "Normal"){
         throw new Error("No normal pokemon allowed!")
     }

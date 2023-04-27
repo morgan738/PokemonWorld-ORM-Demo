@@ -60,7 +60,7 @@ router.get('/ash', async (req, res, next) => {
 
 
 router.post('/', async (req,res,next) => {
-    console.log(req.body)
+    console.log("This is body --> ", req.body)
     const {name, elementType} = req.body
     try {
       const newPokemon = Pokemon.create({name: name, elementType:elementType})
